@@ -1,6 +1,3 @@
-# Repositorio de soluciones subidas en codewars.com
-
-
 def create_phone_number(n):
     if len(n) != 10:
         return "Error"
@@ -944,4 +941,28 @@ def arithmetic(a, b, operator):
         return a*b
     else:
         return a/b
+
+def expression_matter(a, b, c):
+    return max((a + b) * c, a + (b * c), (a * b) + c, a * (b + c),(a * b) * c, a * (b * c), (a * b) * c, a * (b * c),(a + b) + c, a + (b + c), (a + b) + c, a + (b + c))
+
+def square(n):
+    return n*n
+
+def bool_to_word(boolean):
+    return 'Yes' if boolean == True else 'No'
+
+def increment_string(strng):
+    num_texto = ''
+    for i in range(len(strng)):
+        if str(strng[len(strng)-(i+1):len(strng)-i]).isdigit():
+            num_texto=str(strng[len(strng)-(i+1):len(strng)-i])+num_texto
+        else:
+            break
+    if len(num_texto) == 0:
+        return strng + '1'
+    else:
+        return strng[:len(strng)-(len(num_texto))] +'0' *int((len(num_texto) - len(str(int(num_texto)+1)))) + str(int(num_texto)+1)
+
+def past(h, m, s):
+    return s*1000+m*60*1000+h*60*60*1000
 
