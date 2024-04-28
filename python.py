@@ -966,3 +966,26 @@ def increment_string(strng):
 def past(h, m, s):
     return s*1000+m*60*1000+h*60*60*1000
 
+def filter_list(l):
+    resultado = []
+    def es_numero(n):
+        return isinstance(n,(int,float))
+    for e in l:
+        if es_numero(e):
+            resultado.append(e)
+    return resultado
+
+def row_sum_odd_numbers(n):
+    return n**3
+
+def say_hello(name):
+    return 'Hello, ' + name 
+   
+def is_uppercase(inp):
+    for i in range(len(inp)):
+        if str(inp[i]) != str(inp[i]).upper():
+            return False
+    return True
+
+def get_pins(observed):
+    pass # TODO: This is your job, detective! 
