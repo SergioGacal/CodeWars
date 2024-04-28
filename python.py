@@ -987,5 +987,48 @@ def is_uppercase(inp):
             return False
     return True
 
-def get_pins(observed):
-    pass # TODO: This is your job, detective! 
+def encrypt(text, n):
+    if n <1:
+        return text
+    if text == '':
+        return ''
+    elif text == None:
+        return None
+    parcial = ''
+    for i in range(n):
+        for j in range(1,len(text),2):
+            parcial+=text[j]
+        for j in range(0,len(text),2):
+            parcial+=text[j]
+        text = parcial
+        parcial=''
+    return text
+
+def decrypt(encrypted_text, n):
+    if n <1:
+        return encrypted_text
+    if encrypted_text == '':
+        return ''
+    elif encrypted_text == None:
+        return None
+    rearmo = ''
+    for i in range(n):
+        for j in range(int(len(encrypted_text)/2)):
+            rearmo+=(encrypted_text[int(len(encrypted_text)/2)+j])
+            rearmo+=(encrypted_text[0+j])
+        if len(encrypted_text)%2 != 0:
+            rearmo += encrypted_text[len(encrypted_text)-1]
+        encrypted_text = rearmo
+        rearmo = ''
+    return encrypted_text
+
+def find_short(s):
+    resultado = 1000
+    a = s.split(" ")
+    for i in range(len(a)):
+        if len(a[i]) < resultado:
+            resultado = len(a[i])
+    return resultado
+
+def litres(time):
+    return int(time *0.5)
