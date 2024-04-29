@@ -1032,3 +1032,22 @@ def find_short(s):
 
 def litres(time):
     return int(time *0.5)
+
+def get_pins(observed):
+    resultados = []
+    opciones = {0: 80, 1:124, 2: 1235, 3: 236, 4:1457, 5:24568, 6:3569,7:478,8:57890, 9:689}
+    combinaciones = []
+    for i in range(len(observed)):
+        combinaciones.append(str(opciones.get(int(observed[i]))))
+    def iterar_combinaciones(combinaciones, resultado_parcial=""):
+        if not combinaciones:
+            resultados.append(resultado_parcial)
+        else:
+            primera_combinacion = combinaciones[0]
+            for elemento in primera_combinacion:
+                iterar_combinaciones(combinaciones[1:], resultado_parcial + elemento)
+    iterar_combinaciones(combinaciones)
+    return resultados
+
+resultado = get_pins("55")
+print(resultado)
