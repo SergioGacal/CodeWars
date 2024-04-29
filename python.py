@@ -1049,5 +1049,15 @@ def get_pins(observed):
     iterar_combinaciones(combinaciones)
     return resultados
 
-resultado = get_pins("55")
-print(resultado)
+def find_uniq(arr):
+    frecuencia = {}
+    for elemento in arr:
+        if elemento in frecuencia:
+            frecuencia[elemento] += 1
+        else:
+            frecuencia[elemento] = 1
+    
+    for elemento, contador in frecuencia.items():
+        if contador == 1:
+            return elemento
+    return None
