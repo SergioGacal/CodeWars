@@ -1,7 +1,5 @@
 # CodeWars
 
-Repositorio donde dejo los ejercicios realizados en codewars.com
+<br>...para visitar mi perfil<br><br>
 
-Mi perfil en la aplicación:
-
-https://www.codewars.com/users/SergioGacal
+[![Codewars Profile Badges](https://www.codewars.com/users/SergioGacal/badges/large)](https://www.codewars.com/users/SergioGacal)
