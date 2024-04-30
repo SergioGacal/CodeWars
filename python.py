@@ -1086,3 +1086,39 @@ def product_fib(_prod):
             next = fib+fib1
             fib = fib1
             fib1 = next
+
+def goals(laLiga, copaDelRey, championsLeague):
+    return laLiga + copaDelRey + championsLeague
+
+def switch_it_up(number):
+    numeros = {0: 'Zero', 1:'One',2:'Two',3:'Three',4:'Four',5:'Five',6:'Six',7:'Seven',8: 'Eight',9:'Nine'}
+    return numeros[number]
+
+def str_count(strng, letter):
+    return strng.count(letter)
+
+def rot13(message):
+    rot13_reemplazo = {'a': 'n', 'b': 'o', 'c': 'p', 'd': 'q', 'e': 'r', 'f': 's', 'g': 't', 'h': 'u', 'i': 'v', 'j': 'w', 'k': 'x', 'l': 'y', 'm': 'z', 'n': 'a', 'o': 'b', 'p': 'c',     'q': 'd', 'r': 'e', 's': 'f', 't': 'g', 'u': 'h', 'v': 'i', 'w': 'j', 'x': 'k',    'y': 'l', 'z': 'm', 'A': 'N', 'B': 'O', 'C': 'P', 'D': 'Q', 'E': 'R', 'F': 'S', 'G': 'T', 'H': 'U',    'I': 'V', 'J': 'W', 'K': 'X', 'L': 'Y', 'M': 'Z', 'N': 'A', 'O': 'B', 'P': 'C',    'Q': 'D', 'R': 'E', 'S': 'F', 'T': 'G', 'U': 'H', 'V': 'I', 'W': 'J', 'X': 'K','Y': 'L', 'Z': 'M'}
+    respuesta = ''
+    for letra in message:
+        if letra in rot13_reemplazo:
+            respuesta += rot13_reemplazo[letra]
+        else:
+            respuesta+=letra
+    return respuesta
+
+def pipe_fix(nums):
+    resultado = []
+    menor=min(nums)
+    maximo=max(nums)
+    for i in range(menor,maximo+1,1):
+        resultado.append(i)
+    return resultado
+
+def sequence_sum(begin_number, end_number, step):
+    if end_number < begin_number:
+        return 0
+    resultado = 0
+    for i in range(begin_number,end_number+1,step):
+        resultado+=i
+    return resultado
