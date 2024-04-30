@@ -1122,3 +1122,34 @@ def sequence_sum(begin_number, end_number, step):
     for i in range(begin_number,end_number+1,step):
         resultado+=i
     return resultado
+
+def change_me(money): 
+    acepto = {'£5': 500, '£2': 200, '£1' : 100, '50p':50 , '20p': 20}
+    if money not in acepto:
+        return money
+    if money == '20p':
+        return '10p 10p'
+    cambio = acepto[money]
+    p20 = cambio //20
+    p10 = int((cambio - ((cambio //20)*20))/10)
+    monedas = []
+    monedas.extend(['20p']*p20)
+    monedas.extend(['10p']*p10)
+    return ' '.join(monedas)
+
+def find_multiples(integer, limit):
+    respuesta = []
+    for i in range(0,limit,integer):
+        respuesta.append(i)
+    return respuesta
+
+def find_multiples(integer, limit):
+    print(limit%integer)
+    respuesta = []
+    if limit%integer == 0:
+        for i in range(integer,limit+1,integer):
+            respuesta.append(i)
+    else:
+        for i in range(integer,limit,integer):
+            respuesta.append(i)
+    return respuesta
