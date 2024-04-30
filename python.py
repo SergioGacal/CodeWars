@@ -1061,3 +1061,28 @@ def find_uniq(arr):
         if contador == 1:
             return elemento
     return None
+
+def twice_as_old(dad_years_old, son_years_old):
+    if dad_years_old - 2*(son_years_old) <= 0:
+        return (dad_years_old - 2*(son_years_old))*(-1)
+    else:
+        return dad_years_old - 2*(son_years_old)
+
+def solution(nums):
+    if nums:
+        return sorted(nums)
+    else:
+        return []
+
+def product_fib(_prod):
+    fib = 0
+    fib1 = 1
+    while True:
+        if fib * fib1 == _prod:
+            return [fib, fib1, True]
+        elif fib * fib1 > _prod:
+            return [fib, fib1, False]
+        else:
+            next = fib+fib1
+            fib = fib1
+            fib1 = next
