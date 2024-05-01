@@ -1188,3 +1188,19 @@ def problem(a):
         return 'Error'
     else:
         return a*50+6
+
+def between(a,b):
+    resultado = []
+    for i in range(a,b+1):
+        resultado.append(i)
+    return resultado
+
+def get_real_floor(n):
+    if n==0:
+        return 0
+    elif n <0:
+        return n
+    elif n <13:
+        return n-1
+    else:
+        return n-2
