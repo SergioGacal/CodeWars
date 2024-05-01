@@ -1153,3 +1153,38 @@ def find_multiples(integer, limit):
         for i in range(integer,limit,integer):
             respuesta.append(i)
     return respuesta
+
+def two_sum(numbers, target):
+    x=0
+    y=1
+    while x < len(numbers)-1:
+        while y < len(numbers):
+            if numbers[x]+numbers[y] == target and x != y:
+                return x, y
+            y+=1
+        y=1
+        x+=1
+
+def round_to_next5(n):
+    while True:
+        if n%5 ==0:
+            return n
+        n+=1
+
+def sum_array(arr):
+    if arr == [] or arr == None or len(arr)==1:
+        return 0
+    else:
+        return sum(arr)-min(arr)-max(arr)
+
+def minimum(arr):
+    return min(arr)
+
+def maximum(arr):
+    return max(arr)
+
+def problem(a):
+    if type(a) == str:
+        return 'Error'
+    else:
+        return a*50+6
