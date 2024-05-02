@@ -1204,3 +1204,19 @@ def get_real_floor(n):
         return n-1
     else:
         return n-2
+
+def sort_array(source_array):
+    impares = list()
+    for i in range(len(source_array)):
+        if source_array[i]%2 != 0:
+            impares.append(source_array[i])
+    impares = sorted(impares)
+    for i in range(len(source_array)):
+        if source_array[i]%2 != 0:
+            source_array[i] = impares.pop(0)
+    return source_array
+
+def sum_str(a, b):
+    a = int(a) if len(a) >0 else 0
+    b = int(b) if len(b) >0 else 0
+    return str(a+b)
