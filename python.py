@@ -1220,3 +1220,9 @@ def sum_str(a, b):
     a = int(a) if len(a) >0 else 0
     b = int(b) if len(b) >0 else 0
     return str(a+b)
+
+def plural(n):
+    return n != 1
+
+def get_char(c):
+    return chr(c)
