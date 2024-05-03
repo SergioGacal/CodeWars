@@ -1226,3 +1226,40 @@ def plural(n):
 
 def get_char(c):
     return chr(c)
+
+def remove_smallest(numbers):
+    copia = numbers[:]
+    if copia:
+        menor= copia.index(min(copia))
+        copia.pop(menor)
+        return copia
+    else:
+        return []
+
+def two_sort(array):
+    ordenado = sorted(array)
+    valor = ordenado[0]
+    resultado = ''
+    for l in valor:
+        resultado += l + '***'
+    return resultado[0:len(resultado)-3]
+
+def unusual_five():
+    a=len('abcde')
+    return a
+
+def gimme(input_array):
+    menor=min(input_array)
+    mayor=max(input_array)
+    for i in input_array:
+        if i < mayor and i > menor:
+            respuesta = i
+    return input_array.index(respuesta)
+
+def duplicate_count(text):
+    repetidas = []
+    analizar = text.lower()
+    for i in analizar:
+        if analizar.count(i) > 1 and i not in repetidas:
+            repetidas.append(i)
+    return len(repetidas)
