@@ -1263,3 +1263,23 @@ def duplicate_count(text):
         if analizar.count(i) > 1 and i not in repetidas:
             repetidas.append(i)
     return len(repetidas)
+
+def add_five(num):
+    total = num + 5
+    return total
+
+def reverse_letter(st):
+    letras = 'abcdefghijklmnopqrstuvwxyz'
+    respuesta = ''
+    for i in range(len(st)):
+        if st[i] in letras:
+            respuesta = st[i]+respuesta
+    return respuesta
+
+def capitals(word):
+    mayusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    respusta = []
+    for i in range(len(word)):
+        if word[i] in mayusculas:
+            respusta.append(i)
+    return respusta
