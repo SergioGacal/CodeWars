@@ -1283,3 +1283,23 @@ def capitals(word):
         if word[i] in mayusculas:
             respusta.append(i)
     return respusta
+
+def dir_reduc(arr):
+    eliminables = {'NORTH': 'SOUTH', 'SOUTH': 'NORTH', 'EAST': 'WEST', 'WEST': 'EAST'}
+    resultado = []
+    for i in arr:
+        if resultado and resultado[-1] == eliminables.get(i):
+            resultado.pop()
+        else:
+            resultado.append(i)
+    return resultado
+
+def dig_pow(n, p):
+    t= str(n)
+    resultado=0
+    for i in range(len(t)):
+        resultado+=int(t[i]) ** (p+i)
+    if resultado%n ==0:
+        return int(resultado/n)
+    else:
+        return -1
