@@ -1303,3 +1303,15 @@ def dig_pow(n, p):
         return int(resultado/n)
     else:
         return -1
+
+def better_than_average(class_points, your_points):
+    if your_points > (sum(class_points)/len(class_points)):
+        return True 
+    else:
+        return False
+
+def accum(st):
+    resultado = ''
+    for i in range(len(st)):
+        resultado += st[i].capitalize()+st[i].lower()*(i)+'-'
+    return resultado[0:len(resultado)-1]
