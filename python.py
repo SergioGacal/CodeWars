@@ -1315,3 +1315,20 @@ def accum(st):
     for i in range(len(st)):
         resultado += st[i].capitalize()+st[i].lower()*(i)+'-'
     return resultado[0:len(resultado)-1]
+
+def factorial(n):
+    if n <0 or n >12:
+        raise ValueError('ValueError')
+    else:
+        resultado=1
+        for i in range(1,n+1):
+            resultado*=i
+        return resultado
+
+def DNA_strand(dna):
+    valores = {'A':'T','C':'G','T':'A','G':'C'}
+    respuesta = ''
+    for v in dna:
+        respuesta+= valores.get(v)
+    return respuesta
+            
