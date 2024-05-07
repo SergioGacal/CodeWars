@@ -1331,4 +1331,30 @@ def DNA_strand(dna):
     for v in dna:
         respuesta+= valores.get(v)
     return respuesta
-            
+
+def comp(array1, array2):
+    if array1 == [] and array2 == []:
+        return True
+    if array1 is None or array2 is None or not array1 or not array2:
+        return False
+    array3 = []
+    array4 = []
+    for n in array1:
+        if n < 0:
+            array3.append(n*(-1))
+        else:
+            array3.append(n)
+    for n in array2:
+        array4.append(n)
+    o1 = sorted(array3)
+    o2 = sorted(array4)
+    for i in range(len(o1)):
+        if o1[i] ** 2 != o2[i]:
+            return False
+    return True
+
+def chromosome_check(chromosome):
+    if chromosome == 'XX':
+        return 'Congratulations! You\'re going to have a daughter.'
+    else:
+        return 'Congratulations! You\'re going to have a son.'
