@@ -1358,3 +1358,26 @@ def chromosome_check(chromosome):
         return 'Congratulations! You\'re going to have a daughter.'
     else:
         return 'Congratulations! You\'re going to have a son.'
+
+def find_difference(a, b):
+    return abs(a[0]*a[1]*a[2]-b[0]*b[1]*b[2])
+
+def solve(s):
+    mayusculas= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    minusculas= 'abcdefghijklmnopqrstuvwxyz'
+    ma=mi=0
+    for i in s:
+        if i in mayusculas:
+            ma+=1
+        if i in minusculas:
+            mi+=1
+    if ma>mi:
+        return s.upper()
+    else:
+        return s.lower()
+
+def reverse_list(l):
+    l2= []
+    for i in l:
+        l2.insert(0,i)
+    return l2
