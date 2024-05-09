@@ -1403,3 +1403,38 @@ def find_nb(m):
         return n-1
     else:
         return -1
+
+def powers_of_two(n):
+    respuesta = []
+    for i in range(0,n+1):
+        respuesta.append(2**i)
+    return respuesta
+
+def find_average(numbers):
+    if not numbers:
+        return 0
+    else:
+        return sum(numbers)/len(numbers)
+
+def solution(number):
+    if number<0:
+        return 0
+    else:
+        suma=0
+        for i in range(number):
+            if i %3 ==0 or i %5 ==0:
+                suma+=i
+    return suma
+
+def longest_consec(strarr, k):
+    if k > len(strarr) or k < 1:
+        return ''
+    respuesta = ''
+    maximo = 0
+    for i in range(len(strarr) - k + 1):
+        concatenado = ''.join(strarr[i:i + k])
+        largo = len(concatenado)
+        if largo > maximo:
+            respuesta = concatenado
+            maximo = largo
+    return respuesta
