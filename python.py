@@ -1381,3 +1381,25 @@ def reverse_list(l):
     for i in l:
         l2.insert(0,i)
     return l2
+
+def bouncing_ball(h, bounce, window):
+    if h >0 and bounce >0 and bounce <1 and window <h:
+        rebotes = -1
+        while h > window:
+            h*=bounce
+            rebotes+=2
+        return rebotes
+    else:
+        return -1
+
+def find_nb(m):
+    n = 0
+    total = 0
+    while total <m:
+        valor=n*n*n
+        total+=valor
+        n+=1
+    if total == m:
+        return n-1
+    else:
+        return -1
