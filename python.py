@@ -1438,3 +1438,14 @@ def longest_consec(strarr, k):
             respuesta = concatenado
             maximo = largo
     return respuesta
+
+def combat(health, damage):
+    return health - damage if health - damage > 0 else 0
+
+def wave(people):
+    respuesta = []
+    for i in range(len(people)):
+        if people[i] != ' ':
+            frase = people[:i] + people[i].upper() + people[i+1:]
+            respuesta.append(frase)
+    return respuesta
