@@ -1449,3 +1449,31 @@ def wave(people):
             frase = people[:i] + people[i].upper() + people[i+1:]
             respuesta.append(frase)
     return respuesta
+
+def other_angle(a, b):
+    return 180-a-b
+
+def spin_words(sentence):
+    palabras = sentence.split(' ')
+    respuesta = ''
+    for i in range(len(palabras)):
+        if len(palabras[i])>=5:
+            respuesta+=' '+palabras[i][::-1]
+        else:
+            respuesta+=' '+(palabras[i])
+    return respuesta[1:]
+
+def multiply(a, b):
+    return a * b
+
+def digital_root(n):
+    numero=str(n)
+    while len(numero)!=1:
+        total=0
+        for n in numero:
+            total+=int(n)
+        numero=str(total)
+    return int(numero)
+    
+def remove(s):
+    return s[:-1] if s[len(s)-1:] == '!' else s
