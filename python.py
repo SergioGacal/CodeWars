@@ -1477,3 +1477,40 @@ def digital_root(n):
     
 def remove(s):
     return s[:-1] if s[len(s)-1:] == '!' else s
+
+def is_divisible(n,x,y):
+    return True if n % x ==0 and n%y ==0 else False
+
+def count_bits(n):
+    binario = bin(n)
+    respuesta = 0
+    for uno in binario:
+        if uno == '1':
+            respuesta+=1
+    return respuesta
+
+def find_outlier(integers):
+    par = []
+    inpar = []
+    list(map(lambda x: par.append(x) if x%2==0 else inpar.append(x),integers))
+    return par[0] if len(par)==1 else inpar[0]
+
+def xo(s):
+    return s.lower().count('x') == s.lower().count('o')
+
+def maskify(cc):
+    return '#'*(len(cc)-4)+cc[len(cc)-4:] if len(cc)>3 else cc
+
+def to_camel_case(text):
+    texto=''
+    for t in text:
+        if t == '-' or t == '_':
+            texto+= ' '
+        else:
+            texto+= t
+    cadena= texto.split(' ')
+    texto = cadena[0]
+    cadena.pop(0)
+    for c in cadena:
+        texto += c[0].upper() + c[1:len(c)]
+    return texto
