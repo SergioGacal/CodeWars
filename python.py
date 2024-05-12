@@ -1514,3 +1514,18 @@ def to_camel_case(text):
     for c in cadena:
         texto += c[0].upper() + c[1:len(c)]
     return texto
+
+def narcissistic(value) :
+    num_text = str(value)
+    total = 0
+    for num in num_text:
+        total+=int(num)**len(num_text)
+    return total == value
+
+def longest(a1, a2):
+    return ''.join(sorted(set(a1+a2)))
+
+def find_needle(haystack):
+    for i in range(len(haystack)):
+        if haystack[i] == 'needle':
+            return f'found the needle at position {i}'
