@@ -1553,3 +1553,32 @@ def multi_table(number):
     for i in range (1,11):
         respuesta+=f'{i} * {number} = {i*number}\n'
     return respuesta[0:len(respuesta)-1]
+
+def find_even_index(arr):
+    total = sum(arr)
+    izq = 0
+    for i, num in enumerate(arr):
+        total -= num
+        if izq == total:
+            return i
+        izq += num
+    return -1
+
+def smash(words):
+    frase=''
+    for palabra in words:
+        frase+=palabra+' '
+    return frase[0:len(frase)-1]
+
+def move_zeros(lst):
+    respuesta = []
+    print(type(lst),type(respuesta))
+    ceros = 0
+    for num in lst:
+        if num == 0:
+            ceros+=1
+        else:
+            respuesta.append(num)
+    for i in range(ceros):
+        respuesta.append(0)
+    return respuesta
