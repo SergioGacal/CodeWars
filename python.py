@@ -1529,3 +1529,27 @@ def find_needle(haystack):
     for i in range(len(haystack)):
         if haystack[i] == 'needle':
             return f'found the needle at position {i}'
+
+def remove_url_anchor(url):
+    respuesta = ''
+    for letra in url:
+        if letra != '#':
+            respuesta+=letra
+        else:
+            break
+    return respuesta
+
+def how_many_light_sabers_do_you_own(name=''):
+    return 18 if name == 'Zach' else 0
+
+def get_size(w,h,d):
+    return [2*( w * h ) + 2 * (d * h) + 2 * (w * d), w * h * d]
+
+def duty_free(price, discount, holiday_cost):
+    return int(holiday_cost/(price*discount/100))
+
+def multi_table(number):
+    respuesta = ''
+    for i in range (1,11):
+        respuesta+=f'{i} * {number} = {i*number}\n'
+    return respuesta[0:len(respuesta)-1]
