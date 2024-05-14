@@ -1582,3 +1582,15 @@ def move_zeros(lst):
     for i in range(ceros):
         respuesta.append(0)
     return respuesta
+
+def min_wind_strength(strengths):
+    if not strengths:
+        return 0
+    fuerza_necesaria = 0
+    for i in range(1,len(strengths)+1):
+        if i  < len(strengths):
+            fuerza_necesaria = max(fuerza_necesaria, strengths[i-1] + 1)
+            strengths[i] = max(strengths[i] - strengths[i-1], 0)
+        else:
+            fuerza_necesaria = max(fuerza_necesaria, strengths[i-1])
+    return fuerza_necesaria
