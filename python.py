@@ -1594,3 +1594,15 @@ def min_wind_strength(strengths):
         else:
             fuerza_necesaria = max(fuerza_necesaria, strengths[i-1])
     return fuerza_necesaria
+
+def solution(s):
+    respuesta = []
+    iteraciones = len(s)/2
+    if len(s)%2 != 0:
+        iteraciones +=1 
+    for i in range(int(iteraciones)):
+        if len(s[(i*2):(i*2+2)]) == 1:
+            respuesta.append(s[(i*2):(i*2+2)]+'_')
+        else:
+            respuesta.append(s[(i*2):(i*2+2)])
+    return respuesta
