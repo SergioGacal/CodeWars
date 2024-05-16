@@ -1606,3 +1606,13 @@ def solution(s):
         else:
             respuesta.append(s[(i*2):(i*2+2)])
     return respuesta
+
+MORSE_CODE = {'.-': 'A', '-...': 'B', '-.-.': 'C', '-..': 'D', '.': 'E', '..-.': 'F', '--.': 'G', '....': 'H', '..': 'I', '.---': 'J', '-.-': 'K', '.-..': 'L', '--': 'M', '-.': 'N', '---': 'O', '.--.': 'P', '--.-': 'Q', '.-.': 'R', '...': 'S', '-': 'T', '..-': 'U', '...-': 'V', '.--': 'W', '-..-': 'X', '-.--': 'Y', '--..': 'Z', '-----': '0', '.----': '1', '..---': '2', '...--': '3', '....-': '4', '.....': '5', '-....': '6', '--...': '7', '---..': '8', '----.': '9', '.-.-.-': '.', '--..--': ',', '..--..': '?', '.----.': "'", '-.-.--': '!', '-..-.': '/', '-.--.': '(', '-.--.-': ')', '.-...': '&', '---...': ':', '-.-.-.': ';', '-...-': '=', '.-.-.': '+', '-....-': '-', '..--.-': '_', '.-..-.': '"', '...-..-': '$', '.--.-.': '@', '...---...': 'SOS'} # Para que no de error, lo levanta de from preloaded import MORSE_CODE
+def decode_morse(morse_code):
+    respuesta= ''
+    morse_code = morse_code.strip()
+    codigo = (morse_code.replace('   ','  ')).split(' ')
+    for clave in codigo:
+        respuesta += str(MORSE_CODE.get(clave))
+    respuesta =respuesta.replace('None',' ')
+    return(respuesta)
