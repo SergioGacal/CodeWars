@@ -1616,3 +1616,46 @@ def decode_morse(morse_code):
         respuesta += str(MORSE_CODE.get(clave))
     respuesta =respuesta.replace('None',' ')
     return(respuesta)
+
+def pig_it(text):
+    letras = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    respuesta = ''
+    frase = text.split(' ')
+    for palabra in frase:
+        letra=palabra[0]
+        if letra.lower() in letras:
+            respuesta+= palabra[1:]+letra+'ay'+' '
+        else:
+            respuesta+= palabra
+    return respuesta.strip()
+
+def find_missing_letter(chars):
+    letras = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    inicio = letras.index(chars[0])
+    print('inicio', inicio)
+    print('len',len(chars))
+    print()
+    for i in range(len(chars)):
+        if chars[i] != letras[inicio+i]:
+            return letras[inicio+i]
+
+def make_readable(seconds):
+    segundos= str(seconds%60)
+    if len(segundos) == 1:
+        segundos='0'+segundos
+    minutos= int(seconds/60)
+    if minutos >59:
+        horas = int(minutos/60)
+        minutos = str(minutos-(60*horas))
+    else:
+        horas = 0
+    minutos=str(minutos)
+    if len(minutos) == 1:
+        minutos = '0'+minutos
+    horas = str(horas)
+    if len(horas) == 1:
+        horas= '0'+ horas
+    return f'{horas}:{minutos}:{segundos}'
+
+def hero(bullets, dragons):
+    return bullets/dragons >= 2
