@@ -1659,3 +1659,32 @@ def make_readable(seconds):
 
 def hero(bullets, dragons):
     return bullets/dragons >= 2
+
+def rgb(r, g, b):
+    if r <0:
+        r =0
+    if r>255:
+        r=255
+    if g <0:
+        g=0
+    if g >255:
+        g=255
+    if b<0:
+        b=0
+    if b>255:
+        b=255
+    return format(r, '02x').upper()+format(g, '02x').upper()+format(b, '02x').upper()
+
+def divisors(integer):
+    respuesta = []
+    for i in range(2,integer):
+        if integer%i ==0:
+            respuesta.append(i)
+    if respuesta == []:
+        return f'{integer} is prime'
+    return respuesta
+
+def greet(name):
+    if name == "Johnny":
+        return "Hello, my love!"
+    return "Hello, {name}!".format(name=name)
