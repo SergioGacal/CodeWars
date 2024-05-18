@@ -1698,3 +1698,27 @@ def reverse_words(s):
 
 def array_plus_array(arr1,arr2):
     return sum(arr1+arr2)
+
+def valid_braces(string):
+    while '()' in string or '{}' in string or '[]' in string:
+        string=string.replace('()','')
+        string=string.replace('{}','')
+        string=string.replace('[]','')
+    return string ==''
+
+def is_prime(num):
+    if num < 2:
+        return False
+    if num in (2, 3):
+        return True
+    if num % 2 == 0 or num % 3 == 0:
+        return False
+    i = 5
+    while i * i <= num:
+        if num % i == 0 or num % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+def get_average(marks):
+    return int(sum(marks)/(len(marks)))
