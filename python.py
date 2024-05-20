@@ -1725,3 +1725,21 @@ def get_average(marks):
 
 def greet(name, owner):
     return 'Hello boss' if name == owner else 'Hello guest'
+
+def is_anagram(test, original):
+    return sorted(test.lower()) ==  sorted(original.lower())
+
+def remove_exclamation_marks(s):
+    remover = ['¡', '!']
+    respuesta = ''
+    for i in range(len(s)):
+        print(s[i])
+        if s[i] not in remover:
+            respuesta+=s[i]
+    return respuesta
+
+def monkey_count(n):
+    respuesta = []
+    for i in range(1,n+1):
+        respuesta.append(i)
+    return respuesta
