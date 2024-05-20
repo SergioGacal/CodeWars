@@ -1722,3 +1722,6 @@ def is_prime(num):
 
 def get_average(marks):
     return int(sum(marks)/(len(marks)))
+
+def greet(name, owner):
+    return 'Hello boss' if name == owner else 'Hello guest'
