@@ -1743,3 +1743,7 @@ def monkey_count(n):
     for i in range(1,n+1):
         respuesta.append(i)
     return respuesta
+
+def update_light(current):
+    cambios = {'green':'yellow','yellow':'red', 'red':'green'}
+    return cambios.get(current)
