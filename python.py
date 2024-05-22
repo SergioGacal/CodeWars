@@ -1747,3 +1747,10 @@ def monkey_count(n):
 def update_light(current):
     cambios = {'green':'yellow','yellow':'red', 'red':'green'}
     return cambios.get(current)
+
+def bonus_time(salary, bonus):
+    if bonus:
+        return f'${int(salary*10)}'
+    else:
+        return f'${int(salary)}'
+    
