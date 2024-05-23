@@ -1754,3 +1754,18 @@ def bonus_time(salary, bonus):
     else:
         return f'${int(salary)}'
     
+    
+def in_array(array1, array2):
+    previa=set()
+    for contenedor in array2:
+        for contenido in array1:
+            if contenido in contenedor:
+                previa.add(contenido)
+    respuesta = sorted(list(previa))
+    return respuesta
+
+def enough(cap, on, wait):
+    if cap-on-wait>0:
+        return 0
+    else:
+        return (cap-on-wait)*-1
