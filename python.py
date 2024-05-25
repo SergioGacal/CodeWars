@@ -1769,3 +1769,89 @@ def enough(cap, on, wait):
         return 0
     else:
         return (cap-on-wait)*-1
+    
+def get_planet_name(id):
+    planetas = {1:'Mercury', 2: 'Venus',3:'Earth',4: 'Mars',5:'Jupiter',6:'Saturn',7:'Uranus',8:'Neptune'}
+    name = planetas.get(id)
+    return name
+
+def divisors(n):
+    respuesta=0
+    for i in range(n,0,-1):
+        if n%i==0:
+            respuesta+=1
+    return respuesta
+
+def zero(a=None): 
+    return 0 if not a else a(0)
+def one(a=None): 
+    return 1 if not a else a(1)
+def two(a=None):
+    return 2 if not a else a(2)
+def three(a=None):
+    return 3 if not a else a(3)
+def four(a=None):
+    return 4 if not a else a(4)
+def five(a=None):
+    return 5 if not a else a(5)
+def six(a=None):
+    return 6 if not a else a(6)
+def seven(a=None):
+    return 7 if not a else a(7)
+def eight(a=None):
+    return 8 if not a else a(8)
+def nine(a=None):
+    return 9 if not a else a(9)
+def plus(b):
+    return lambda x:x+b
+def minus(b):
+    return lambda x:x-b
+def times(b):
+    return lambda x:x*b
+def divided_by(b):
+    return lambda x:int(x/b)
+
+def dont_give_me_five(start,end):
+    n=0
+    for i in range(start,end+1):
+        if '5' not in str(i):
+            n+=1
+    return n
+
+def solution(n):
+    num_text='0'*(4-len(str(n)))+str(n)
+    miles=int(num_text[0])*'M'
+    c = int(num_text[1])
+    d = int(num_text[2])
+    n = int(num_text[3])
+    if c <4:
+        centena=c*'C'
+    elif c==4:
+        centena='CD'
+    else:
+        centena='D'
+        if c>5 and c<9:
+            centena+=(c-5)*'C'
+        elif c==9:
+            centena='CM'
+    if d <4:
+        decena=d*'X'
+    elif d==4:
+        decena='XL'
+    else:
+        decena='L'
+        if d>5 and d<9:
+            decena+=(d-5)*'X'
+        elif d==9:
+            decena='XC'
+    if n <4:
+        numeral=n*'I'
+    elif n==4:
+        numeral='IV'
+    else:
+        numeral='V'
+        if n>5 and n<9:
+            numeral+=(n-5)*'I'
+        elif n==9:
+            numeral='IX'
+    return miles+centena+decena+numeral
