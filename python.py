@@ -1865,3 +1865,18 @@ def nb_dig(n, d):
         resultado=str(i**2)
         respuesta+=resultado.count(str(d))
     return respuesta
+
+def generate_hashtag(s):
+    hashtag= '#'
+    frase=s.lower().split(' ')
+    for palabra in frase:
+        hashtag+=palabra.capitalize()
+    if len(hashtag)>140 or not s:
+        return False
+    return hashtag
+
+def stray(arr):
+    for i in range(len(arr)):
+        if arr.count(arr[i]) == 1:
+            return arr[i]
+        
