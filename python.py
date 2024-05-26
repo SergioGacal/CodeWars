@@ -1855,3 +1855,13 @@ def solution(n):
         elif n==9:
             numeral='IX'
     return miles+centena+decena+numeral
+
+def include(arr, item):
+    return item in arr
+
+def nb_dig(n, d):
+    respuesta=0
+    for i in range(0,n+1):
+        resultado=str(i**2)
+        respuesta+=resultado.count(str(d))
+    return respuesta
