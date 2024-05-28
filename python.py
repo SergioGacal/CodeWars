@@ -1879,4 +1879,33 @@ def stray(arr):
     for i in range(len(arr)):
         if arr.count(arr[i]) == 1:
             return arr[i]
-        
+
+def cakes(recipe, available):
+    ingredientes=list(recipe.keys())
+    tengo=list(available.keys())
+    for necesito in ingredientes:
+        if necesito not in tengo:
+            return 0
+    maximo=9999999
+    for i in ingredientes:
+        if maximo > int(available.get(i)/recipe.get(i)):
+            maximo = int(available.get(i)/recipe.get(i))
+    return maximo
+
+def first_non_repeating_letter(s):
+    for letra in s.lower():
+        if s.lower().count(letra) == 1:
+            return s[s.lower().index(letra)]
+    return ''
+
+def odd_count(n):
+    return int(n/2)
+
+def to_alternating_case(string):
+    respuesta=''
+    for letra in string:
+        if letra.isupper():
+            respuesta+=letra.lower()
+        else:
+            respuesta+=letra.upper()
+    return respuesta
