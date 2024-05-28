@@ -1909,3 +1909,30 @@ def to_alternating_case(string):
         else:
             respuesta+=letra.upper()
     return respuesta
+
+def order_weight(strng):
+    if not strng:
+        return ''
+    lista=strng.split(' ')
+    previa=[]
+    for i in range(len(lista)):
+        k=0
+        for j in range(len(lista[i])):
+            k+=int(lista[i][j])
+        previa.append(k)
+    sumas_unicas=[]
+    for i in previa:
+        if i not in sumas_unicas:
+            sumas_unicas.append(i)
+    sumas_unicas= sorted(sumas_unicas)
+    resultado=''
+    for valor_a_buscar in sumas_unicas:
+        temporal = []
+        for indice, valor in enumerate(previa):
+            if valor == valor_a_buscar:
+                temporal.append(lista[indice])
+        temporal=sorted(temporal)
+        for i in range(len(temporal)):
+            resultado+=temporal[i]+' '
+    return resultado[:-1]
+    
