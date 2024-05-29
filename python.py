@@ -1936,3 +1936,23 @@ def order_weight(strng):
             resultado+=temporal[i]+' '
     return resultado[:-1]
     
+def divisible_by(numbers, divisor):
+    resultado = []
+    for num in numbers:
+        if num%divisor ==0:
+            resultado.append(num)
+    return resultado
+
+def solution(roman : str) -> int:
+    resultado=0
+    equivalencia = {'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}
+    for i in range(len(roman)):
+        if i == 0:
+            resultado+= equivalencia.get(roman[i])
+        else:
+            if equivalencia.get(roman[i]) > equivalencia.get(roman[i-1]):
+                resultado-=equivalencia.get(roman[i-1])
+                resultado+=(equivalencia.get(roman[i])-equivalencia.get(roman[i-1]))
+            else:
+                resultado+=equivalencia.get(roman[i])
+    return resultado
