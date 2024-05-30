@@ -2015,3 +2015,18 @@ def how_much_i_love_you(nb_petals):
     petalos= {0: "not at all", 1: "I love you", 2: "a little", 3: "a lot", 4: "passionately", 5: "madly"}
     return petalos.get(nb_petals%6)
 
+def solution(args):
+    respuesta = ''
+    i = 0
+    while i < len(args):
+        start = i
+        while i < len(args) - 1 and args[i] + 1 == args[i + 1]:
+            i += 1
+        end = i
+        if end - start >= 2:
+            respuesta += f'{args[start]}-{args[end]},'
+        else:
+            for j in range(start, end + 1):
+                respuesta += f'{args[j]},'
+        i += 1
+    return respuesta[:-1]  # Elimina la última coma
