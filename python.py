@@ -2030,3 +2030,21 @@ def solution(args):
                 respuesta += f'{args[j]},'
         i += 1
     return respuesta[:-1]  # Elimina la última coma
+
+def final_grade(exam, projects):
+    if exam > 90 or projects > 10:
+        return 100
+    elif exam > 75 and projects > 4:
+        return 90
+    elif exam > 50 and projects >1 :
+        return 75
+    else:
+        return 0
+
+def sort_by_length(arr):
+    final = len(arr)
+    for i in range(final):
+        for j in range(final - 1 - i):
+            if len(arr[j]) > len(arr[j + 1]):
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr
