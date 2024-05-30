@@ -1956,3 +1956,62 @@ def solution(roman : str) -> int:
             else:
                 resultado+=equivalencia.get(roman[i])
     return resultado
+
+def format_duration(seconds):
+    if seconds ==0:
+        return 'now'
+    anios= seconds//60//60//24//365
+    if anios >0:
+        seconds= seconds-(anios*31536000)
+    dias = seconds//60//60//24
+    if dias >0:
+        seconds=seconds-(dias*86400)
+    horas = seconds //60//60
+    if horas >0:
+        seconds=seconds-(horas*3600)
+    minutos = seconds//60
+    if minutos >0:
+        seconds=seconds-(minutos*60)
+    respuesta = ''
+    
+    if anios > 1:
+        respuesta+= str(anios)+' years, '
+    elif anios == 1:
+        respuesta+= str(anios)+' year, '
+    else:
+        pass
+    if dias > 1:
+        respuesta+= str(dias)+' days, '
+    elif dias == 1:
+        respuesta+= str(dias)+' day, '
+    else:
+        pass
+    if horas >1:
+        respuesta+= str(horas)+' hours, '
+    elif horas ==1:
+        respuesta+= str(horas)+' hour, '
+    else:
+        pass
+    if minutos >1:
+        respuesta+= str(minutos)+' minutes, '
+    elif minutos ==1:
+        respuesta+= str(minutos)+' minute, '
+    else:
+        pass
+    if seconds >1:
+        respuesta+= str(seconds)+' seconds, '
+    elif seconds ==1:
+        respuesta+= str(seconds)+' second, '
+    else:
+        pass
+    respuesta = respuesta[:-2]
+    for i in range(len(respuesta),0,-1):
+        if (respuesta[i-1]) == ',':
+            respuesta=respuesta[0:i-1] +' and '+respuesta[i+1:]
+            break
+    return respuesta
+
+def how_much_i_love_you(nb_petals):
+    petalos= {0: "not at all", 1: "I love you", 2: "a little", 3: "a lot", 4: "passionately", 5: "madly"}
+    return petalos.get(nb_petals%6)
+
