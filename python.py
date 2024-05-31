@@ -2076,3 +2076,19 @@ def scramble(s1, s2):
             if valor > d1.get(clave) or d1.get(clave) is None:
                 return False 
     return True
+
+def calculate_years(principal, interest, tax, desired):
+    years=0
+    while principal < desired:
+        gane=(principal*interest)*(1-tax)
+        principal+=gane
+        years+=1
+    return years
+
+def create_array(n):
+    res=[]
+    i=1
+    while i<=n:
+        res.append(i)
+        i+=1
+    return res
