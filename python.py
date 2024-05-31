@@ -1,3 +1,8 @@
+import math
+#def square_or_square_root(arr):
+from collections import Counter
+#def scramble(s1, s2):
+
 def create_phone_number(n):
     if len(n) != 10:
         return "Error"
@@ -2048,3 +2053,26 @@ def sort_by_length(arr):
             if len(arr[j]) > len(arr[j + 1]):
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
     return arr
+
+def move(position, roll):
+    return position+(roll*2)
+
+def square_or_square_root(arr):
+    respuesta= []
+    for num in arr:
+        if math.sqrt(num) - int(math.sqrt(num)) == 0:
+            respuesta.append(int(math.sqrt(num)))
+        else:
+            respuesta.append(num**2)
+    return respuesta
+
+def scramble(s1, s2):
+    d1= Counter(s1)
+    d2=Counter(s2)
+    for clave, valor in d2.items():
+        if not d1.get(clave):
+            return False
+        else:
+            if valor > d1.get(clave) or d1.get(clave) is None:
+                return False 
+    return True
