@@ -4,6 +4,8 @@ function evenOrOdd(number) {
         else {return 'Even'}
     }
 
-function helloWorld() {
-    console.log('Hello World')
-    }
+    function helloWorld(){
+        var str = 'Hello World!';
+        console.log(str);
+      }
+      
