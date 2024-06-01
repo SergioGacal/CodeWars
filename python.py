@@ -2104,3 +2104,53 @@ def goose_filter(birds):
         if palabra in birds:
             birds.remove(palabra)
     return birds
+
+def stringy(size):
+    if size%2==0:
+        return '10'*int(size/2)
+    else:
+        return '10'*int(size/2)+'1'
+
+def check_alive(health):
+    return health >0
+
+def fix_the_meerkat(arr):
+    return [arr[2],arr[1],arr[0]]
+
+def well(x):
+    if 'good' not in x:
+        return 'Fail!'
+    if x.count('good') <= 2:
+        return 'Publish!'
+    else:
+        return 'I smell a series!'
+
+def shortcut( s ):
+    vocales= 'aeiou'
+    nvcls= ''
+    for letra in s:
+        if letra not in vocales:
+            nvcls += letra
+    return nvcls
+
+def solution(a, b):
+    largo_a = len(a)
+    largo_b = len(b)
+    if largo_a < largo_b:
+        return a+b+a
+    else:
+        return b+a+b
+
+def small_enough(array, limit):
+    return max(array) <= limit
+
+a = "code"
+b = "wa.rs"
+name = a + b
+
+def name_shuffler(str_):
+    separo = str_.split(' ')
+    return separo[1]+' '+separo[0]
+
+def nth_even(n):
+    return (n*2)-2
