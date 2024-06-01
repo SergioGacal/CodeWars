@@ -3,3 +3,7 @@ function evenOrOdd(number) {
         return 'Odd'} 
         else {return 'Even'}
     }
+
+function helloWorld() {
+    console.log('Hello World')
+    }
