@@ -2092,3 +2092,15 @@ def create_array(n):
         res.append(i)
         i+=1
     return res
+
+def break_chocolate(n, m):
+    if n==0:
+        return 0
+    return n*m-1
+
+geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+def goose_filter(birds):
+    for palabra in geese:
+        if palabra in birds:
+            birds.remove(palabra)
+    return birds
