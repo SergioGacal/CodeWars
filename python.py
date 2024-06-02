@@ -2154,3 +2154,24 @@ def name_shuffler(str_):
 
 def nth_even(n):
     return (n*2)-2
+
+def people_with_age_drink(age):
+    if age <14:
+        return 'drink toddy'
+    elif age <18:
+        return 'drink coke'
+    elif age<21:
+        return 'drink beer'
+    else:
+        return 'drink whisky'
+
+def camel_case(s): # sería "PascalCase"
+    respuesta = ''
+    separo = s.lower().split(' ')
+    for palabra in separo:
+        respuesta += palabra.capitalize()
+    return respuesta
+
+def two_oldest_ages(ages):
+    ordeno=sorted(ages,reverse=True)
+    return sorted(ordeno[:2])
