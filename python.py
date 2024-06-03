@@ -2209,3 +2209,34 @@ class Person:
     @property
     def info(self):
         return f"{self.name}s age is {self.age}"
+
+def position(alphabet):
+    letras= '-abcdefghijklmnopqrstuvwxyz'
+    return 'Position of alphabet: '+ str(letras.index(alphabet))
+
+def title_case(title, minor_words=''):
+    separo = title.lower().split(' ')
+    minor = minor_words.lower().split(' ')
+    respuesta = ''
+    for palabra in separo:
+        if palabra not in minor:
+            respuesta+= palabra.capitalize()+' '
+        else:
+            if respuesta == '':
+                respuesta += palabra.capitalize()+' '
+            else:
+                respuesta+= palabra+' '
+    return respuesta[:-1]
+
+def add(a, b):
+    return a+b
+def multiply(a, b):
+    return a*b
+def divide(a, b):
+    return a/b
+def mod(a, b):
+    return a%b
+def exponent(a, b):
+    return a**b
+def subt(a, b):
+    return a-b
