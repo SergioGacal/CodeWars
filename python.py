@@ -2240,3 +2240,51 @@ def exponent(a, b):
     return a**b
 def subt(a, b):
     return a-b
+
+def xor(a,b):
+    if (a== True and b== False):
+        return True
+    elif (a==True and b== True):
+        return False
+    elif (a==False and b==True):
+        return True
+    else:
+        return False
+
+def no_boring_zeros(num):
+    if not num:
+        return 0
+    text=str(num)
+    for i in range(len(text)):
+        if ((text[len(text)-1])) == '0':
+            text = text[0:len(text)-1]
+        else:
+            return int(text)
+
+def score(dice):
+    resultado=0
+    if dice.count(1) == 5:
+        resultado+=1200
+    elif dice.count(1) == 4:
+        resultado+=1100
+    elif dice.count(1) == 3:
+        resultado+=1000
+    elif dice.count(1) >0:
+        resultado+=100 * dice.count(1)
+    if dice.count(5) == 5:
+        resultado+=600
+    elif dice.count(5) == 4:
+        resultado+=550
+    elif dice.count(5) == 3:
+        resultado+=500
+    elif dice.count(5) >0:
+        resultado+=50 * dice.count(5)
+    if dice.count(6) >= 3:
+        resultado+=600
+    if dice.count(4) >= 3:
+        resultado+=400        
+    if dice.count(3) >= 3:
+        resultado+=300    
+    if dice.count(2) >= 3:
+        resultado+=200     
+    return resultado
