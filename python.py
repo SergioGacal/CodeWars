@@ -2288,3 +2288,21 @@ def score(dice):
     if dice.count(2) >= 3:
         resultado+=200     
     return resultado
+
+def merge_arrays(arr1, arr2):
+    unir = set(arr1) | set(arr2)
+    respuesta = list(unir)
+    return sorted(respuesta)
+    
+def sp_eng(sentence): 
+    return 'english' in sentence.lower()
+
+def to_binary(n):
+    if n == 0:
+        return '0'
+    binario = ''
+    while n >0:
+        resto = n%2
+        binario = str(resto)+ binario
+        n //= 2
+    return int(binario)
