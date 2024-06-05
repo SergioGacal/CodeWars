@@ -2306,3 +2306,44 @@ def to_binary(n):
         binario = str(resto)+ binario
         n //= 2
     return int(binario)
+
+def to_weird_case(words):
+    frase = words.split(' ')
+    respuesta = ''
+    for palabra in frase:
+        
+        for i in range(len(palabra)):
+            if i%2 == 0 :
+                respuesta += palabra[i].upper()
+            else:
+                respuesta += palabra[i].lower()
+        respuesta += ' '
+    return respuesta [:-1]
+
+def check_exam(arr1,arr2):
+    resultado =0
+    for i in range(len(arr1)):
+        if arr2[i]:
+            if arr1[i] == arr2[i]:
+                resultado += 4
+            else:
+                resultado -= 1
+    if resultado < 0:
+        resultado = 0
+    return resultado
+
+def is_valid_IP(strng):
+    if not strng:
+        return False
+    separo = strng.split('.')
+    if len(separo) != 4:
+        return False
+    for num in separo:
+        if not num.isdigit() or (num.startswith('0') and len(num) > 1):
+            return False
+        if not num.isdigit():
+            return False
+        n = int(num)
+        if not(0 <= n <=255):
+            return False
+    return True
