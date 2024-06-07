@@ -2347,3 +2347,18 @@ def is_valid_IP(strng):
         if not(0 <= n <=255):
             return False
     return True
+
+def capitalize_word (word):
+    return word.capitalize()
+
+def diamond(n):
+    respuesta = ''
+    if n <=0 or n%2 ==0:
+        return None
+    media = int(n-1)/2
+    for i in range(int(media)):
+        respuesta += ' '*(int(media)-i)+'*'*(2*i+1)+'\n'
+    respuesta += '*'*n +'\n'
+    for i in range(int(media)-1,-1,-1):
+        respuesta += ' '*(int(media)-i)+'*'*(2*i+1)+'\n'
+    return respuesta
