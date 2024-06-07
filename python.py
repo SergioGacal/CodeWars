@@ -2362,3 +2362,29 @@ def diamond(n):
     for i in range(int(media)-1,-1,-1):
         respuesta += ' '*(int(media)-i)+'*'*(2*i+1)+'\n'
     return respuesta
+
+def warn_the_sheep(queue):
+    for i in range(len(queue),0,-1):
+        if queue[len(queue)-1] == 'wolf':
+            return 'Pls go away and stop eating my sheep'
+        if queue[i-1] == 'wolf':
+            return f'Oi! Sheep number {len(queue)-i}! You are about to be eaten by a wolf!'
+
+def rev_rot(strng, sz):
+    if sz > len(strng):
+        return ''
+    if sz <=0 or strng == '':
+        return ''
+    pedazos=int(len(strng))/sz
+    respuesta=''
+    for i in range(int(pedazos)):
+        trozo=strng[i*sz:(i+1)*sz]
+        resultado=0
+        for dig in trozo:
+            resultado+=int(dig)
+        if resultado %2 == 0:
+            for i in range(len(trozo),0,-1):
+                respuesta+=trozo[i-1]
+        else:
+            respuesta+=trozo[1:len(trozo)]+trozo[0:1]
+    return respuesta
