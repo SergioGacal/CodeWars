@@ -2426,3 +2426,7 @@ def find_glasses(lst):
                         if 'OO-OO' in lente:
                             return lst.index(lente)
 
+STRANGE_STRING = 'ß'
+
+def search_names(logins):
+    return list(filter(lambda x: any('_' in item for item in x), logins))
