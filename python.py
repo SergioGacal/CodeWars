@@ -2388,3 +2388,41 @@ def rev_rot(strng, sz):
         else:
             respuesta+=trozo[1:len(trozo)]+trozo[0:1]
     return respuesta
+
+def sq_in_rect(lng, wdth):
+    mayor = max(lng,wdth)
+    menor = min(lng,wdth)
+    resultado = []
+    if lng == wdth:
+        return None
+    while mayor != 1 or menor != 1:
+        resultado.append(menor)
+        temporal = [(mayor-menor),menor]
+        menor = min(temporal)
+        mayor = max(temporal)
+        if menor == mayor:
+            resultado.append(menor)
+            break
+    return resultado
+
+def rain_amount(mm):
+    if mm >= 40:
+        return "Your plant has had more than enough water for today!"
+    else:
+        return f'You need to give your plant {40-mm}mm of water'
+
+def find_glasses(lst):
+    pares = {'dustO':'Odust', 'O':'O','OO':'OO'}
+    for lente in lst:
+        for i,(key, value) in enumerate(pares.items()):
+            if key in lente and value in lente:
+                evaluar = lente[lente.index(key):]
+                if '-' in evaluar:
+                    guiones = evaluar.count('-')
+                    if str(key)+'-'*int(guiones)+str(value) in lente:
+                        return lst.index(lente)
+                    if lente.count(key) >1:
+                        print(lente,'\n',key,value,'\n')
+                        if 'OO-OO' in lente:
+                            return lst.index(lente)
+
