@@ -2430,3 +2430,9 @@ STRANGE_STRING = 'ß'
 
 def search_names(logins):
     return list(filter(lambda x: any('_' in item for item in x), logins))
+
+def mouth_size(animal): 
+    if animal.lower() == 'alligator':
+        return 'small'
+    else:
+        return 'wide'
