@@ -2436,3 +2436,27 @@ def mouth_size(animal):
         return 'small'
     else:
         return 'wide'
+
+def prime_factors(n):
+    resultado = ''
+    previa = []
+    divisor = 2
+    while n > 1:
+        while n % divisor == 0:
+            n //= divisor
+            previa.append(divisor)
+        divisor += 1
+        if divisor * divisor > n:
+            if n > 1:
+                previa.append(n)
+            break
+    agrupado = {elemento: previa.count(elemento) for elemento in previa}
+    for clave, valor in agrupado.items():
+        if valor >1:
+            resultado += f'({clave}**{valor})'
+        else:
+            resultado += f'({clave})'
+    return resultado
+
+def reverse(st):
+    return " ".join(st.split()[::-1])
