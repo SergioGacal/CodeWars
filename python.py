@@ -2460,3 +2460,19 @@ def prime_factors(n):
 
 def reverse(st):
     return " ".join(st.split()[::-1])
+
+def sum_digits(number):
+    texto=str(number)
+    total=0
+    numeros = '1234567890'
+    for letra in texto:
+        if letra in numeros:
+            total += int(letra)
+    return total
+
+def no_odds(values):
+    respuesta = []
+    for num in values:
+        if num % 2 == 0:
+            respuesta.append(num)
+    return respuesta
