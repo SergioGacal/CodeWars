@@ -2476,3 +2476,16 @@ def no_odds(values):
         if num % 2 == 0:
             respuesta.append(num)
     return respuesta
+
+def replace_exclamation(st):
+    respuesta = ''
+    vocales = 'aeiouAEIOU'
+    for letra in st:
+        if letra in vocales:
+            respuesta += '!'
+        else:
+            respuesta += letra
+    return respuesta
+
+def combine_names(name,surname):
+    return f'{name} {surname}'
