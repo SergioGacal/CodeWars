@@ -2501,3 +2501,13 @@ def sum_mul(n, m):
 
 def hex_to_dec(s):
     return int(s,16)
+
+def angle(n):
+    return 180*(n-2)
+
+def add_length(str_):
+    separo = str_.split(' ')
+    respuesta = []
+    for palabra in separo:
+        respuesta.append(f'{palabra} {len(palabra)}')
+    return respuesta
