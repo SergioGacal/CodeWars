@@ -2489,3 +2489,15 @@ def replace_exclamation(st):
 
 def combine_names(name,surname):
     return f'{name} {surname}'
+
+def sum_mul(n, m):
+    if n < 1 or m < 1 and n > m or not n and not m:
+        return "INVALID"
+    resultado = 0
+    for i in range(m-n):
+        if (n+i)%n == 0:
+            resultado += (n+i)
+    return resultado
+
+def hex_to_dec(s):
+    return int(s,16)
