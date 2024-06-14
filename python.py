@@ -2511,3 +2511,33 @@ def add_length(str_):
     for palabra in separo:
         respuesta.append(f'{palabra} {len(palabra)}')
     return respuesta
+
+def snail(snail_map):
+    if len(snail_map) == 1 and len(snail_map[0]) == 0:
+        return []
+    respuesta = []
+    partida = {'fila':0,'columna':-1}
+    sentido = 'der'
+    filas=len(snail_map)
+    columnas=len(snail_map)-1
+    opciones = {
+    'der': {'sig': 'aba', 'x': 1, 'y': 0,'resto':'fila', 'rango_j': filas },
+    'aba': {'sig': 'izq', 'x': 0, 'y': 1,'resto':'columna', 'rango_j': columnas },
+    'izq': {'sig': 'arr', 'x': -1, 'y': 0,'resto':'fila', 'rango_j': filas },
+    'arr': {'sig': 'der', 'x': 0, 'y': -1,'resto':'columna', 'rango_j': columnas },
+}
+    for i in range(len(snail_map)*2-1):
+        if sentido in ('der','izq'):
+            for j in range(filas):
+                partida['columna'] += opciones[sentido]['x']
+                respuesta.append(snail_map[partida['fila']][partida['columna']])
+        else:
+            for j in range(columnas):
+                partida['fila'] += opciones[sentido]['y']
+                respuesta.append(snail_map[partida['fila']][partida['columna']])
+        if opciones[sentido]['resto'] == 'fila':
+            filas -= 1
+        else:
+            columnas -= 1
+        sentido = opciones[sentido]['sig']
+    return respuesta
