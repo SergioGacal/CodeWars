@@ -2541,3 +2541,18 @@ def snail(snail_map):
             columnas -= 1
         sentido = opciones[sentido]['sig']
     return respuesta
+
+def triple_trouble(one, two, three):
+    return ''.join(map(lambda x: x[0]+x[1]+x[2],zip(one,two,three)))
+
+def calculate_age(year_of_birth, current_year):
+    if year_of_birth+1 == current_year:
+        return 'You are 1 year old.'
+    if year_of_birth < current_year:
+        return f'You are {current_year - year_of_birth} years old.'
+    elif year_of_birth == current_year:
+        return 'You were born this very year!'
+    elif year_of_birth == current_year+1:
+        return 'You will be born in 1 year.'
+    else:
+        return f'You will be born in {year_of_birth - current_year} years.'
