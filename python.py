@@ -2578,3 +2578,23 @@ def perimeter(n):
         fibo_sig = fibo_ant + fibo_act
         acumulado += fibo_sig
     return acumulado *4
+
+def bin_to_decimal(inp):
+    return int(inp,2)
+
+def mango(quantity, price):
+    return (quantity-int(quantity/3))*price
+
+def max_multiple(divisor, bound):
+    for i in range(bound,0,-1):
+        if i % divisor == 0:
+            return i
+
+def correct_tail(body, tail):
+    return tail == body[-1]
+
+def generate_range(start, stop, step):
+    return list(range(start,stop+1,step))
+
+def min_value(digits):
+    return int(''.join(map(str, sorted(set(digits)))))
