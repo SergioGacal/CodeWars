@@ -2556,3 +2556,25 @@ def calculate_age(year_of_birth, current_year):
         return 'You will be born in 1 year.'
     else:
         return f'You will be born in {year_of_birth - current_year} years.'
+
+def zeros(n):
+    res = 0
+    if n == 0:
+        return res
+    for i in range(1,n):
+        if int(n /5 ** i) != 0:
+            res += int(n /5 ** i)
+        else:
+            return res
+
+def perimeter(n):
+    fibo_ant = 0
+    fibo_act = 1
+    fibo_sig = 1
+    acumulado = 2
+    for i in range(2,n+1):
+        fibo_ant = fibo_act
+        fibo_act = fibo_sig
+        fibo_sig = fibo_ant + fibo_act
+        acumulado += fibo_sig
+    return acumulado *4
