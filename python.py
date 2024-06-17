@@ -2617,3 +2617,23 @@ def array(string):
     middle_items = items[1:-1]
     result = ' '.join(middle_items)
     return result
+
+def hello(name=''):
+    if name:
+        return 'Hello, ' + name.capitalize()+'!'
+    else:
+        return 'Hello, World!'
+
+def how_many_dalmatians(n):
+    if n <=10:
+        return 'Hardly any'
+    elif n <=50:
+        return 'More than a handful!'
+    elif n <=100:
+        return "Woah that's a lot of dogs!"
+    else:
+        return '101 DALMATIONS!!!'
+
+import re
+def replace_dots(s):
+    return re.sub(r'\.', '-', s)
