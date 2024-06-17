@@ -2,6 +2,8 @@ import math
 #def square_or_square_root(arr):
 from collections import Counter
 #def scramble(s1, s2):
+import datetime
+# def check_coupon(entered_code, correct_code, current_date, expiration_date):
 
 def create_phone_number(n):
     if len(n) != 10:
@@ -2598,3 +2600,20 @@ def generate_range(start, stop, step):
 
 def min_value(digits):
     return int(''.join(map(str, sorted(set(digits)))))
+
+from datetime import datetime
+def check_coupon(entered_code, correct_code, current_date, expiration_date):
+    if not entered_code or not correct_code or not current_date or not expiration_date:
+        return False
+    print(entered_code, correct_code, current_date, expiration_date)
+    current_date_dt = datetime.strptime(current_date, '%B %d, %Y')
+    expiration_date_dt = datetime.strptime(expiration_date, '%B %d, %Y')
+    return entered_code == correct_code and current_date_dt <= expiration_date_dt
+
+def array(string):
+    items = string.split(',')
+    if len(items) <= 2:
+        return None
+    middle_items = items[1:-1]
+    result = ' '.join(middle_items)
+    return result
