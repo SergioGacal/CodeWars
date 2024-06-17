@@ -45,3 +45,14 @@ function evenOrOdd(number) {
             b =  v6;
         return a % b;
       }
+function howManyDalmatians(number) {
+    if (number <= 10) {
+        return 'Hardly any';
+    } else if (number <= 50) {
+        return 'More than a handful!';
+    } else if (number <= 100) {
+        return "Woah that's a lot of dogs!";
+    } else {
+        return '101 DALMATIANS!!!';
+    }
+}
