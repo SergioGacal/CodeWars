@@ -2637,3 +2637,6 @@ def how_many_dalmatians(n):
 import re
 def replace_dots(s):
     return re.sub(r'\.', '-', s)
+
+def bumps(road):
+    return 'Car Dead' if road.count('n') >15  else 'Woohoo!'
