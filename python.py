@@ -2640,3 +2640,19 @@ def replace_dots(s):
 
 def bumps(road):
     return 'Car Dead' if road.count('n') >15  else 'Woohoo!'
+
+def list_squared(m, n):
+    def es_cuadrado(n):
+        return int(n ** 0.5) ** 2 == n
+    respuesta = []
+    suma=0
+    for i in range(m,n+1):
+        suma=0
+        for j in range(1, int(i ** 0.5) + 1):
+            if i % j == 0:
+                suma += j ** 2
+                if j != i // j:
+                    suma += (i // j) ** 2
+        if es_cuadrado(suma):
+            respuesta.append([i,suma])
+    return respuesta
