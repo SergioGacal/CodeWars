@@ -2656,3 +2656,40 @@ def list_squared(m, n):
         if es_cuadrado(suma):
             respuesta.append([i,suma])
     return respuesta
+
+def distinct(seq):
+    respuesta = []
+    for num in seq:
+        if num not in respuesta:
+            respuesta.append(num)
+    return respuesta
+
+def greet(name):
+    return f'Hello, {name} how are you doing today?'
+
+def take(arr,n):
+    return arr[0:n]
+
+def weather_info (temp):
+    c = (temp-32)*(5/9)
+    return f'{c} is freezing temperature' if c < 0 else f'{c} is above freezing temperature'
+
+def capitalize(s):
+    a = b = ''
+    for i in range(len(s)):
+        if i % 2 == 0:
+            a += s[i].upper()
+            b += s[i].lower()
+        else:
+            a += s[i].lower()
+            b += s[i].upper()
+    return [a,b]
+
+def multiplication_table(size):
+    respuesta = []
+    lista = list(range(1,size+1))
+    print(lista)
+    for i in range(size):
+        nueva = list(map(lambda x: x *(i+1),lista))
+        respuesta.append(nueva)
+    return respuesta
