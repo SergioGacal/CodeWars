@@ -2693,3 +2693,29 @@ def multiplication_table(size):
         nueva = list(map(lambda x: x *(i+1),lista))
         respuesta.append(nueva)
     return respuesta
+
+def flip(d, a):
+    return sorted(a) if d == 'R'  else  sorted(a,reverse=True)
+
+def build_string(*args):
+    return "I like {}!".format(", ".join(args))
+
+codigo = {'a':'1','1':'a','e':'2','2':'e','i':'3','3':'i','o':'4','4':'o','u':'5','5':'u'}
+
+def encode(st):
+    respuesta = ''
+    for letra in st:
+        if letra in codigo:
+            respuesta += codigo.get(letra)
+        else:
+            respuesta += letra
+    return respuesta
+
+def decode(st):
+    respuesta = ''
+    for letra in st:
+        if letra in codigo:
+            respuesta += codigo.get(letra)
+        else:
+            respuesta += letra
+    return respuesta
