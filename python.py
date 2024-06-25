@@ -2719,3 +2719,9 @@ def decode(st):
         else:
             respuesta += letra
     return respuesta
+
+def sum_of_minimums(numbers):
+    return sum(map(lambda x : min(x),numbers))
+
+def main(verb, noun):
+    return f'{verb}{noun}'
