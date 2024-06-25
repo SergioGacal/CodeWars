@@ -2725,3 +2725,16 @@ def sum_of_minimums(numbers):
 
 def main(verb, noun):
     return f'{verb}{noun}'
+
+def flatten_and_sort(array):
+    respuesta = []
+    for i in range(len(array)):
+        for j in range(len(array[i])):
+            respuesta.append(array[i][j])
+    return sorted(respuesta)
+
+def say_hello(name, city, state):
+    nombre = ''
+    for n in name:
+        nombre += n + ' '
+    return f'Hello, {nombre[:-1]}! Welcome to {city}, {state}!'
