@@ -2738,3 +2738,9 @@ def say_hello(name, city, state):
     for n in name:
         nombre += n + ' '
     return f'Hello, {nombre[:-1]}! Welcome to {city}, {state}!'
+
+def in_asc_order(arr):
+    return arr == sorted(arr)
+
+def find_average(nums):
+    return sum(nums)/len(nums)
