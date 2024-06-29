@@ -2744,3 +2744,12 @@ def in_asc_order(arr):
 
 def find_average(nums):
     return sum(nums)/len(nums)
+
+def seats_in_theater(tot_cols, tot_rows, col, row):
+    return((tot_cols-col+1)*(tot_rows-row))
+
+def solution(digits):
+    respuesta= []
+    for i in range(len(str(digits))-4):
+        respuesta.append(str(digits)[i:i+5])
+    return max(respuesta)
