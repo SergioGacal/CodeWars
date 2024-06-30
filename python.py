@@ -2753,3 +2753,15 @@ def solution(digits):
     for i in range(len(str(digits))-4):
         respuesta.append(str(digits)[i:i+5])
     return max(respuesta)
+
+def multiple_of_index(arr):
+    respuesta = []
+    for i in range(len(arr)):
+        if arr[i] == 0:
+            respuesta.append(0)
+        elif i > 0 and arr[i] % i == 0:
+            respuesta.append(arr[i])
+    return respuesta
+
+def array_madness(a,b):
+    return sum(list(map(lambda x : x ** 2 , a))) > sum(list(map(lambda x : x ** 3 , b)))
