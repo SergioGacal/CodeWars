@@ -2765,3 +2765,10 @@ def multiple_of_index(arr):
 
 def array_madness(a,b):
     return sum(list(map(lambda x : x ** 2 , a))) > sum(list(map(lambda x : x ** 3 , b)))
+
+websites = []
+for i in range(1000):
+    websites.append('codewars')
+
+def remainder(a,b):
+    return None if min(a,b) == 0 else max(a,b) % min(a,b)
