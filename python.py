@@ -2772,3 +2772,20 @@ for i in range(1000):
 
 def remainder(a,b):
     return None if min(a,b) == 0 else max(a,b) % min(a,b)
+
+def row_weights(array):
+    a = b = 0
+    for i in range(len(array)):
+        if i % 2 == 0:
+            a += array[i]
+        else:
+            b += array[i]
+    return (a,b)
+
+def string_clean(s):
+    n = '1234567890'
+    r = ''
+    for c in s:
+        if c not in n:
+            r += c
+    return r
