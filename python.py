@@ -2789,3 +2789,39 @@ def string_clean(s):
         if c not in n:
             r += c
     return r
+
+def parse(data):
+    init = 0
+    respuesta = []
+    for i in range(len(data)):
+        if data[i] == 'i':
+            init += 1
+            print(data[i], init)
+        elif data[i] == 'd':
+            init -= 1
+            print(data[i])
+        elif data[i] == 's':
+            init = init ** 2
+            print(data[i])
+        elif data[i] == 'o':
+            respuesta.append(init)
+            print(data[i])
+    return respuesta
+
+def good_vs_evil(good, evil):
+    bien = good.split(' ')
+    mal = evil.split(' ')
+    total_bien = int(bien[0])*1+int(bien[1])*2+int(bien[2])*3+int(bien[3])*3+int(bien[4])*4+int(bien[5])*10
+    total_mal = int(mal[0])*1+int(mal[1])*2+int(mal[2])*2+int(mal[3])*2+int(mal[4])*3+int(mal[5])*5+int(mal[6])*10
+    if total_bien > total_mal:
+        return 'Battle Result: Good triumphs over Evil'
+    elif total_bien < total_mal:
+        return 'Battle Result: Evil eradicates all trace of Good'
+    else:
+        return 'Battle Result: No victor on this battle field'
+
+def derive(coefficient, exponent): 
+    return f'{coefficient * exponent}x^{exponent-1}'
+
+def cube_checker(volume, side):
+    return volume == side ** 3 and volume > 0 and side > 0
