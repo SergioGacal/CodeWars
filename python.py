@@ -2825,3 +2825,14 @@ def derive(coefficient, exponent):
 
 def cube_checker(volume, side):
     return volume == side ** 3 and volume > 0 and side > 0
+
+def cookie(x):
+    if isinstance(x,str):
+        return 'Who ate the last cookie? It was Zach!'
+    elif type(x) is bool:
+        return 'Who ate the last cookie? It was the dog!'
+    else:
+        return 'Who ate the last cookie? It was Monica!'
+    
+    def multiply(n):
+    return n * (5**int(len(str(n)))) if n>0 else n * (5**int(len(str(n*-1))))
