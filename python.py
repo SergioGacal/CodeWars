@@ -2837,4 +2837,11 @@ def cookie(x):
 def multiply(n):
     return n * (5**int(len(str(n)))) if n>0 else n * (5**int(len(str(n*-1))))
 
+def billboard(name, price=30):
+    costo = 0
+    for i in range(len(name)):
+        costo += price
+    return costo
 
+def digits(n):
+    return int(len(str(n)))
