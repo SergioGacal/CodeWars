@@ -2845,3 +2845,13 @@ def billboard(name, price=30):
 
 def digits(n):
     return int(len(str(n)))
+
+def even_numbers(arr,n):
+    respuesta = []
+    for i in range(len(arr)):
+        print(i,arr[len(arr)-1-i])
+        if arr[-i-1]%2 == 0:
+            respuesta.insert(0,arr[len(arr)-1-i])
+        if len(respuesta) == n:
+            break
+    return respuesta
