@@ -2855,3 +2855,9 @@ def even_numbers(arr,n):
         if len(respuesta) == n:
             break
     return respuesta
+
+def factorial(n):
+    resultado = 1
+    for i in range(n,0,-1):
+        resultado *= i
+    return resultado
