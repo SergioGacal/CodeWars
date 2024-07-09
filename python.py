@@ -2861,3 +2861,16 @@ def factorial(n):
     for i in range(n,0,-1):
         resultado *= i
     return resultado
+
+def evaporator(content, evap_per_day, threshold):
+    dias = 0
+    resultado = 100
+    evapapora = 1 - evap_per_day /100
+    while resultado > threshold:
+        resultado *= evapapora
+        dias +=1
+    return dias
+
+def get_drink_by_profession(param):
+    codigo = {"Jabroni":"Patron Tequila", "School Counselor":"Anything with Alcohol","Programmer":"Hipster Craft Beer","Bike Gang Member":"Moonshine","Politician":"Your tax dollars","Rapper":"Cristal"}
+    return codigo.get(param.title() ,'Beer')
