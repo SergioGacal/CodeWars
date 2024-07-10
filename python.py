@@ -2874,3 +2874,13 @@ def evaporator(content, evap_per_day, threshold):
 def get_drink_by_profession(param):
     codigo = {"Jabroni":"Patron Tequila", "School Counselor":"Anything with Alcohol","Programmer":"Hipster Craft Beer","Bike Gang Member":"Moonshine","Politician":"Your tax dollars","Rapper":"Cristal"}
     return codigo.get(param.title() ,'Beer')
+
+def stairs_in_20(stairs):
+    return (sum(stairs[0])+sum(stairs[1])+sum(stairs[2])+sum(stairs[3])+sum(stairs[4])+sum(stairs[5])+sum(stairs[6]))*20
+
+def shark(pontoon_distance, shark_distance, you_speed, shark_speed, dolphin):
+    if dolphin:
+        shark_speed /= 2
+    mi_tiempo = pontoon_distance / you_speed
+    tiempo_tiburon = shark_distance / shark_speed
+    return 'Alive!' if mi_tiempo < tiempo_tiburon else 'Shark Bait!'
