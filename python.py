@@ -2884,3 +2884,11 @@ def shark(pontoon_distance, shark_distance, you_speed, shark_speed, dolphin):
     mi_tiempo = pontoon_distance / you_speed
     tiempo_tiburon = shark_distance / shark_speed
     return 'Alive!' if mi_tiempo < tiempo_tiburon else 'Shark Bait!'
+
+import math
+def calculate_tip(amount, rating):
+    propina = {'terrible': 0, 'poor':5,'good':10,'great':15,'excellent':20}
+    return math.ceil(amount * (propina.get(rating.lower())/100)) if rating.lower() in propina else 'Rating not recognised'
+
+def is_vow(inp):
+    return [chr(num) if num in {97, 101, 105, 111, 117} else num for num in inp]
