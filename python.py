@@ -2892,3 +2892,15 @@ def calculate_tip(amount, rating):
 
 def is_vow(inp):
     return [chr(num) if num in {97, 101, 105, 111, 117} else num for num in inp]
+
+def remove(st):
+    while st[len(st)-1:len(st)] == '!':
+        st = st[0:len(st)-1]
+    return st
+
+def adjacent_element_product(array):
+    maximo = array[0] *array[1]
+    for i in range(len(array)-1):
+        if array[i]* array[i+1] > maximo:
+            maximo = array[i]* array[i+1]
+    return maximo
