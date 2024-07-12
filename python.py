@@ -2904,3 +2904,9 @@ def adjacent_element_product(array):
         if array[i]* array[i+1] > maximo:
             maximo = array[i]* array[i+1]
     return maximo
+
+def sort_gift_code(code):
+    return ''.join(sorted(code))
+
+import re
+regex = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$"
