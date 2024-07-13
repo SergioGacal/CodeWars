@@ -2910,3 +2910,9 @@ def sort_gift_code(code):
 
 import re
 regex = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$"
+
+def check(a, x): 
+    return x in a
+
+def who_is_paying(name):
+    return [name, name[:2]] if len(name)>2 else [name[:2]]
