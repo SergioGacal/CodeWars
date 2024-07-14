@@ -2916,3 +2916,9 @@ def check(a, x):
 
 def who_is_paying(name):
     return [name, name[:2]] if len(name)>2 else [name[:2]]
+
+def is_leap_year(year):
+    return year % 100 != 0 and year % 4 == 0 or year % 400 == 0
+
+def format_money(amount):
+    return '${:.2f}'.format(amount)
