@@ -2922,3 +2922,13 @@ def is_leap_year(year):
 
 def format_money(amount):
     return '${:.2f}'.format(amount)
+
+def is_digit(n):
+    return n.isdigit() and len(n) == 1
+
+def vowel_indices(word):
+    respuesta = []
+    for i in range(len(word)):
+        if word[i] in 'aeiouAEIOUyY':
+            respuesta.append(i+1)
+    return respuesta
