@@ -2932,3 +2932,14 @@ def vowel_indices(word):
         if word[i] in 'aeiouAEIOUyY':
             respuesta.append(i+1)
     return respuesta
+
+def filter_string(st):
+    resultado = ''
+    for a in st:
+        if a in '1234567890':
+            resultado += a
+    return int(resultado)
+
+def shorten_to_date(long_date):
+    return long_date.split(",")[0]
+
