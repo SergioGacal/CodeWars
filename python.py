@@ -2943,3 +2943,9 @@ def filter_string(st):
 def shorten_to_date(long_date):
     return long_date.split(",")[0]
 
+def vert_mirror(strng):
+    return '\n'.join([line[::-1] for line in strng.split('\n')])
+def hor_mirror(strng):
+    return '\n'.join(strng.split('\n')[::-1])
+def oper(fct, s):
+    return fct(s)
