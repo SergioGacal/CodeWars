@@ -2949,3 +2949,13 @@ def hor_mirror(strng):
     return '\n'.join(strng.split('\n')[::-1])
 def oper(fct, s):
     return fct(s)
+
+import re
+def remove(st, n):
+    return re.sub(r'!', '', st, n)
+
+def generate_shape(n):
+    rta=''
+    for i in range(n):
+        rta +='+'*n+'\n'
+    return rta[:-1]
