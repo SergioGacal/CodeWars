@@ -2959,3 +2959,20 @@ def generate_shape(n):
     for i in range(n):
         rta +='+'*n+'\n'
     return rta[:-1]
+
+def gps(s, x):
+    if len(x)<2:
+        return 0
+    a = x[1]-x[0]
+    for i in range(len(x)-1):
+        if a < x[i+1]-x[i]:
+            a = x[i+1]-x[i]
+    return int(a*3600 / s)
+
+def remove_duplicate_words(s):
+    separo = s.split(' ')
+    respuesta = ''
+    for palabra in separo:
+        if palabra not in respuesta:
+            respuesta += palabra + ' '
+    return respuesta[:-1]
