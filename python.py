@@ -2976,3 +2976,7 @@ def remove_duplicate_words(s):
         if palabra not in respuesta:
             respuesta += palabra + ' '
     return respuesta[:-1]
+
+import re
+def validate_code(code):
+    return bool(re.match(r'^[123]', str(code)))
