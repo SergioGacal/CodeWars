@@ -2987,3 +2987,8 @@ def quote(fighter):
 def duck_duck_goose(players, goose):
     return players[(goose - 1) % len(players)].name
 
+def greet(name): 
+    return f'Hello {name.capitalize()}!'
+
+def _all(seq, fun): 
+    return all(map(fun,seq))
