@@ -3006,4 +3006,10 @@ def uefa_euro_2016(teams, scores):
         return f'At match {teams[0]} - {teams[1]}, {teams[1]} won!'
     else:
         return f'At match {teams[0]} - {teams[1]}, teams played draw.'
-    
+
+def to_float_array(arr): 
+    return list(map(float, arr))
+
+def predict_age(age_1, age_2, age_3, age_4, age_5, age_6, age_7, age_8):
+     return int(((age_1**2+age_2**2+age_3**2+age_4**2+age_5**2+age_6**2+age_7**2+age_8**2)**0.5)/2)
+ 
