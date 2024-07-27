@@ -3012,4 +3012,25 @@ def to_float_array(arr):
 
 def predict_age(age_1, age_2, age_3, age_4, age_5, age_6, age_7, age_8):
      return int(((age_1**2+age_2**2+age_3**2+age_4**2+age_5**2+age_6**2+age_7**2+age_8**2)**0.5)/2)
- 
+
+def sum_of_differences(arr):
+    if len(arr)<2:
+        return 0
+    nuevo = sorted(arr,reverse=True)
+    resultado = 0
+    for i in range(len(nuevo)-1):
+        resultado += nuevo[i]-nuevo[i+1]
+    return resultado
+
+def show_sequence(n):
+    if n > 0:
+        resultado=0
+        texto = ''
+        for i in range(n+1):
+            resultado += i
+            texto += str(i) + '+'
+        return texto[:-1] + ' = ' + str(resultado)
+    elif n == 0:
+        return '0=0'
+    else:
+        return f'{n}<0'
