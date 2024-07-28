@@ -3034,3 +3034,9 @@ def show_sequence(n):
         return '0=0'
     else:
         return f'{n}<0'
+
+def spacify(string):
+    respuesta = ''
+    for letra in string:
+        respuesta += letra + ' '
+    return respuesta[:-1]
