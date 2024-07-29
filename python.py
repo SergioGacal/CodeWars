@@ -3040,3 +3040,11 @@ def spacify(string):
     for letra in string:
         respuesta += letra + ' '
     return respuesta[:-1]
+
+def usdcny(usd):
+    return f'{(usd*6.75):.2f} Chinese Yuan'
+
+websites.append('codewars')
+
+def get_even_numbers(arr):
+    return list(filter(lambda x: x%2 == 0,arr))
