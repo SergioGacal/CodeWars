@@ -3048,3 +3048,11 @@ websites.append('codewars')
 
 def get_even_numbers(arr):
     return list(filter(lambda x: x%2 == 0,arr))
+
+def max_rot(n):
+    texto = str(n)
+    parcial = [n]
+    for i in range(len(texto)):
+        texto = texto[:i] + texto[i+1:] + texto[i]
+        parcial.append(int(texto))
+    return max(parcial)
