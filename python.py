@@ -3056,3 +3056,5 @@ def max_rot(n):
         texto = texto[:i] + texto[i+1:] + texto[i]
         parcial.append(int(texto))
     return max(parcial)
+
+odds = lambda x: list(filter(lambda n: n % 2 != 0, x))
