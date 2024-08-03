@@ -3058,3 +3058,4 @@ def max_rot(n):
     return max(parcial)
 
 odds = lambda x: list(filter(lambda n: n % 2 != 0, x))
+
