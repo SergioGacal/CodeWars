@@ -56,3 +56,33 @@ function howManyDalmatians(number) {
         return '101 DALMATIANS!!!';
     }
 }
+
+function solveTTT(board) {
+    for (let i = 0; i < 9; i++) {
+        if (board[i] === '') {
+            board[i] = 'X';
+            if (isWinningMove(board, 'X')) {
+                return i;
+            }
+            board[i] = '';
+        }
+    }
+    for (let i = 0; i < 9; i++) {
+        if (board[i] === '') {
+            return i;
+        }
+    }
+    return -1;
+}
+
+function isWinningMove(board, player) {
+    const winningCombos = [
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],
+        [0, 4, 8], [2, 4, 6]
+    ];
+
+    return winningCombos.some(combo => {
+        return combo.every(index => board[index] === player);
+    });
+}
