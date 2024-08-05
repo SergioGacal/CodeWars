@@ -86,3 +86,9 @@ function isWinningMove(board, player) {
         return combo.every(index => board[index] === player);
     });
 }
+
+var laLigaGoals = 43;
+var championsLeagueGoals = 10;
+var copaDelReyGoals = 5;
+
+var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals;
