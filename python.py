@@ -3058,3 +3058,16 @@ def max_rot(n):
     return max(parcial)
 
 odds = lambda x: list(filter(lambda n: n % 2 != 0, x))
+
+def folding(a, b):
+    cuadrados = 0
+    while a !=0 and b !=0:
+        if a < b:
+            a,b = b,a
+        cuadrados += a // b
+        a = a % b
+    return cuadrados
+
+def whatday(num):
+    dias = {1:'Sunday',2:'Monday',3:'Tuesday',4:'Wednesday',5:'Thursday',6:'Friday',7:'Saturday'}
+    return dias.get(num) if num < 8 and num > 0 else 'Wrong, please enter a number between 1 and 7'
