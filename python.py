@@ -3079,3 +3079,6 @@ def solution(arr_val, arr_unit) :
     peso = {'kg': 1,'g' : 0.001,'mg' : 1e-6,'μg' : 1e-9,'lb' : 0.453592}
     distancia = {'m' : 1,'cm' : .01,'mm' : .001,'μm' : 1e-6,'ft' : 0.3048}
     return 6.67e-11 * (arr_val[0] * peso[arr_unit[0]]) * (arr_val[1] * peso[arr_unit[1]]) / (arr_val[2] * distancia[arr_unit[2]])**2
+
+def power_of_two(x):
+    return x > 0 and (x & (x - 1)) == 0
