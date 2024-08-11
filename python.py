@@ -3082,3 +3082,9 @@ def solution(arr_val, arr_unit) :
 
 def power_of_two(x):
     return x > 0 and (x & (x - 1)) == 0
+
+def reverse(lst):
+    result = list()
+    while lst:
+        result.append(lst.pop())
+    return result
