@@ -3093,3 +3093,14 @@ def cube_odd(arr):
     if any(not isinstance(x, (int, float)) or isinstance(x, bool) for x in arr):
         return None
     return sum(x**3 for x in arr if x**3 % 2 != 0)
+
+def to_nato(words):
+    nato = {'a': 'Alfa','b': 'Bravo','c': 'Charlie','d': 'Delta','e': 'Echo','f': 'Foxtrot','g': 'Golf','h': 'Hotel','i': 'India','j': 'Juliett','k': 'Kilo','l': 'Lima','m': 'Mike', 'n': 'November','o': 'Oscar','p': 'Papa','q': 'Quebec','r': 'Romeo','s': 'Sierra', 't': 'Tango', 'u': 'Uniform','v': 'Victor','w': 'Whiskey','x': 'Xray', 'y': 'Yankee','z': 'Zulu' , ',': ',', '.': '.', '!': '!','?': '?'}
+    letras = ''
+    for letra in words:
+        if letra != ' ':
+            letras += letra.lower()
+    respuesta = ''
+    for valor in letras:
+        respuesta = respuesta + nato.get(valor) + ' '
+    return respuesta [:-1]
