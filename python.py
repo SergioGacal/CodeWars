@@ -3104,3 +3104,6 @@ def to_nato(words):
     for valor in letras:
         respuesta = respuesta + nato.get(valor) + ' '
     return respuesta [:-1]
+
+def find(ar, el):
+    return ar.index(el) if el in ar else 'Not found'
