@@ -3107,3 +3107,7 @@ def to_nato(words):
 
 def find(ar, el):
     return ar.index(el) if el in ar else 'Not found'
+
+class Ball:
+    def __init__(self, ball_type="regular"):
+        self.ball_type = ball_type
