@@ -3111,3 +3111,6 @@ def find(ar, el):
 class Ball:
     def __init__(self, ball_type="regular"):
         self.ball_type = ball_type
+        
+def divide_numbers(x,y):
+    return x / y
