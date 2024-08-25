@@ -1,9 +1,9 @@
 import math
-#def square_or_square_root(arr):
+#def square_or_square_root(arr)
 from collections import Counter
-#def scramble(s1, s2):
+#def scramble(s1, s2)
 import datetime
-# def check_coupon(entered_code, correct_code, current_date, expiration_date):
+# def check_coupon(entered_code, correct_code, current_date, expiration_date)
 
 def create_phone_number(n):
     if len(n) != 10:
