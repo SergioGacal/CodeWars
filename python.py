@@ -3114,3 +3114,10 @@ class Ball:
         
 def divide_numbers(x,y):
     return x / y
+
+def words_to_marks(s):
+    lista = 'abcdefghijklmnopqrstuvwxyz'
+    resultado = 0
+    for letra in s:
+        resultado += lista.index(letra)+1
+    return resultado
