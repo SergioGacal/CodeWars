@@ -3121,3 +3121,8 @@ def words_to_marks(s):
     for letra in s:
         resultado += lista.index(letra)+1
     return resultado
+
+class Sleigh(object):
+    def authenticate(self, name, password):
+        return name == 'Santa Claus' and password == 'Ho Ho Ho!'
+    
