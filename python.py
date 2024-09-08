@@ -3125,4 +3125,6 @@ def words_to_marks(s):
 class Sleigh(object):
     def authenticate(self, name, password):
         return name == 'Santa Claus' and password == 'Ho Ho Ho!'
-    
+
+def nearest_sq(n):
+    return int(n**0.5)**2 if int(n-int(n**0.5)**2) < int((int(n**0.5)+1)**2-n) else (int(n**0.5)+1)**2
