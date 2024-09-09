@@ -3128,3 +3128,6 @@ class Sleigh(object):
 
 def nearest_sq(n):
     return int(n**0.5)**2 if int(n-int(n**0.5)**2) < int((int(n**0.5)+1)**2-n) else (int(n**0.5)+1)**2
+
+def apple(x):
+    return "It's hotter than the sun!!" if int(x)**2 > 1000 else "Help yourself to a honeycomb Yorkie for the glovebox."
