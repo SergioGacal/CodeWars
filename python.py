@@ -3131,3 +3131,10 @@ def nearest_sq(n):
 
 def apple(x):
     return "It's hotter than the sun!!" if int(x)**2 > 1000 else "Help yourself to a honeycomb Yorkie for the glovebox."
+
+def mxdiflg(a1, a2):
+    if len(a1) < 1 or len(a2) < 1:
+        return -1
+    largosa = list(map(lambda x : len(x), a1))
+    largosb = list(map(lambda x : len(x),a2))
+    return max((max(largosa)-min(largosb)),(max(largosb)-min(largosa)))
