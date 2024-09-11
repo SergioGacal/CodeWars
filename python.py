@@ -3138,3 +3138,37 @@ def mxdiflg(a1, a2):
     largosa = list(map(lambda x : len(x), a1))
     largosb = list(map(lambda x : len(x),a2))
     return max((max(largosa)-min(largosb)),(max(largosb)-min(largosa)))
+
+def parts_sums(ls):
+    resultado = [0] * (len(ls) + 1)
+    acumulada = 0
+    for i in range(len(ls) - 1, -1, -1):
+        acumulada += ls[i]
+        resultado[i] = acumulada
+    return resultado
+
+def up_array(arr):
+    if arr == []:
+        return None
+    numeros_ok = (0,1,2,3,4,5,6,7,8,9)
+    number = ''
+    for elemento in arr:
+        if elemento not in numeros_ok:
+            return None
+        else:
+            number += str(elemento)
+    resultado =[]    
+    numero = int(number)
+    numero_mas = numero + 1
+    numero_mast = str(numero_mas)
+    if arr[0] == 0 and len(arr) == len(numero_mast):
+        for numero in numero_mast:
+            resultado.append(int(numero))
+    elif arr[0] == 0 and len(arr) != len(numero_mast):
+        resultado.append(0)
+        for numero in numero_mast:
+            resultado.append(int(numero))
+    else:
+        for numero in numero_mast:
+            resultado.append(int(numero))
+    return resultado
