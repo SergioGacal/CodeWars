@@ -3172,3 +3172,6 @@ def up_array(arr):
         for numero in numero_mast:
             resultado.append(int(numero))
     return resultado
+
+def largest_pair_sum(numbers): 
+    return sorted(numbers)[len(numbers)-1]+sorted(numbers)[len(numbers)-2]
