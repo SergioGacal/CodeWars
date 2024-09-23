@@ -3175,3 +3175,12 @@ def up_array(arr):
 
 def largest_pair_sum(numbers): 
     return sorted(numbers)[len(numbers)-1]+sorted(numbers)[len(numbers)-2]
+
+def print_array(arr):
+    respuesta = ''
+    for palabra in arr:
+        respuesta += ',' + str(palabra)
+    return respuesta[1:]
+
+def get_ascii(ch: str) -> int:
+    return ord(ch)
