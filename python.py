@@ -3187,3 +3187,6 @@ def get_ascii(ch: str) -> int:
 
 def elevator(left, right, call):
     return "left" if abs(call - left) < abs(call - right) else "right"
+
+def pillars(num_pill, dist, width):
+    return round(((width * (num_pill -2)/100) + dist * (num_pill -1))*100)  if ((width * (num_pill -2)/100) + dist * (num_pill -1)) >0 else 0
