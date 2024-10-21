@@ -3190,3 +3190,18 @@ def elevator(left, right, call):
 
 def pillars(num_pill, dist, width):
     return round(((width * (num_pill -2)/100) + dist * (num_pill -1))*100)  if ((width * (num_pill -2)/100) + dist * (num_pill -1)) >0 else 0
+
+def calculator(x, y, op):
+    if not (isinstance(x, (int, float)) and isinstance(y, (int, float))):
+        return 'unknown value'
+    if op == '+':
+        return x + y
+    elif op == '-':
+        return x - y
+    elif op == '*':
+        return x * y
+    elif op == '/':
+        return x / y if y != 0 else 'undefined'  # Para evitar división por 0
+    else:
+        return 'unknown value'
+    
