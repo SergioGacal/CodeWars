@@ -3207,3 +3207,20 @@ def calculator(x, y, op):
     
 def same_case(a,b):
     return a.isupper() == b.isupper() if a.isalpha() and b.isalpha() else -1
+
+def is_sorted_and_how(arr):
+    if len(arr) < 2:
+        return 'no'
+    resultado = []
+    for i in range(len(arr)-1):
+        if arr[i]< arr[i+1]:
+            resultado.append('a')
+        else:
+            resultado.append('d')
+    valido = len(set(resultado))
+    if valido == 2:
+        return 'no'
+    elif resultado[0] == 'd':
+        return 'yes, descending'
+    else:
+        return 'yes, ascending'
